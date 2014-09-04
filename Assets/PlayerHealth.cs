@@ -4,7 +4,7 @@ using System.Collections;
 public class PlayerHealth : MonoBehaviour {
 	public int maxHealth = 100;
 	public int curHealth = 100;
-	public bool active = false;
+	//public bool active = false;
 	public float healthBarLenght;
 	
 	

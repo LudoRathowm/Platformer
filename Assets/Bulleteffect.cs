@@ -23,6 +23,9 @@ public class Bulleteffect : MonoBehaviour {
 	public void	OnTriggerEnter2D(Collider2D other) {
 		GameObject target = other.gameObject;
 		if (target.CompareTag ("Player")) {
+			bool cantHit = other.gameObject.GetComponent<Test>().isTopBlocking;
+			Debug.Log (cantHit);
+			if (!cantHit)
 			other.gameObject.GetComponent<PlayerHealth> ().curHealth -= 15;
 			Destroy (gameObject);
 				}
